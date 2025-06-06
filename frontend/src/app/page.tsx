@@ -61,20 +61,7 @@ export default function Home() {
 	return (
 		<main className="min-h-screen flex flex-col bg-gradient-to-br from-yellow-100 via-pink-100 to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 transition-colors duration-500 relative overflow-hidden">
 			{/* Modern button group in top right */}
-			<div className="fixed top-6 right-8 z-50 flex gap-3">
-				<Link
-					href="/auth#login"
-					className="px-5 py-2 rounded-full font-semibold bg-white/80 dark:bg-gray-900/80 text-blue-600 dark:text-pink-300 border border-blue-300 dark:border-pink-400 shadow hover:bg-blue-600 hover:text-white dark:hover:bg-pink-400 dark:hover:text-gray-900 transition-all duration-200 backdrop-blur-md"
-				>
-					Login
-				</Link>
-				<Link
-					href="/auth#signup"
-					className="px-5 py-2 rounded-full font-semibold bg-blue-600 dark:bg-pink-400 text-white shadow hover:bg-white hover:text-blue-600 dark:hover:bg-white dark:hover:text-pink-400 border border-blue-600 dark:border-pink-400 transition-all duration-200"
-				>
-					Sign Up
-				</Link>
-			</div>
+			{/* (Removed login and sign up buttons) */}
 			{/* Plain carousel text at the top, no images, with arrows */}
 			<section className="w-full pt-32 pb-8 flex flex-row items-center justify-center gap-4 select-none">
 				<button
