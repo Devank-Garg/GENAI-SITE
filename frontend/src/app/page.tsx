@@ -166,9 +166,6 @@ export default function Home() {
 									Start your AI journey with fundamental concepts and basic implementations.
 								</p>
 								<div className="flex items-center justify-between">
-									<span className="text-blue-600 dark:text-blue-400 font-semibold">
-										4.8 ★ (2.3k reviews)
-									</span>
 									<span className="text-gray-600 dark:text-gray-400">
 										8 weeks
 									</span>
@@ -201,9 +198,6 @@ export default function Home() {
 									Deep dive into machine learning algorithms and neural networks.
 								</p>
 								<div className="flex items-center justify-between">
-									<span className="text-blue-600 dark:text-blue-400 font-semibold">
-										4.7 ★ (1.8k reviews)
-									</span>
 									<span className="text-gray-600 dark:text-gray-400">
 										12 weeks
 									</span>
@@ -236,9 +230,6 @@ export default function Home() {
 									Master cutting-edge AI techniques and research methodologies.
 								</p>
 								<div className="flex items-center justify-between">
-									<span className="text-blue-600 dark:text-blue-400 font-semibold">
-										4.9 ★ (950 reviews)
-									</span>
 									<span className="text-gray-600 dark:text-gray-400">
 										16 weeks
 									</span>
