@@ -175,7 +175,7 @@ export default function Home() {
 					</Link>
 
 					{/* Intermediate Course */}
-					<Link href="/courses/intermediate" className="group">
+					<Link href="courses/intermediate" className="group">
 						<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
 							<div className="relative">
 								<img
