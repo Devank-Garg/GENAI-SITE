@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
-import ReactMarkdown from 'react-markdown';
+import MarkdownPreview from '@uiw/react-markdown-preview';
 
 interface Course {
   id: string;
@@ -60,9 +60,9 @@ export default function BeginnerCoursePage() {
 
   return (
     <main className="min-h-screen flex flex-col bg-gradient-to-br from-yellow-100 via-pink-100 to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 transition-colors duration-500">
-      <div className="flex flex-1 w-full max-w-7xl mx-auto mt-12 mb-16 rounded-2xl shadow-lg overflow-hidden bg-white/90 dark:bg-gray-900/90">
+      <div className="flex flex-1 w-full h-full gap-8 px-4 md:px-10 py-8 md:py-14">
         {/* Sidebar */}
-        <aside className="w-64 min-w-[200px] bg-blue-50 dark:bg-gray-800 border-r border-blue-200 dark:border-pink-400 p-6 flex flex-col gap-4">
+        <aside className="w-64 min-w-[200px] bg-blue-50 dark:bg-gray-800 border-r border-blue-200 dark:border-pink-400 p-6 md:p-8 flex flex-col gap-4 rounded-xl shadow-md">
           <h2 className="text-xl font-bold text-blue-700 dark:text-pink-300 mb-4">Sections</h2>
           <nav className="flex flex-col gap-2">
             {sections.map((section) => (
@@ -81,14 +81,14 @@ export default function BeginnerCoursePage() {
           </nav>
         </aside>
         {/* Main Content */}
-        <section className="flex-1 p-10 overflow-y-auto">
-          <h1 className="text-3xl font-extrabold text-blue-700 dark:text-pink-300 mb-2">{course.title}</h1>
-          <p className="text-lg text-gray-700 dark:text-gray-200 mb-6">{course.description}</p>
+        <section className="flex-1 w-full h-full overflow-y-auto p-2 md:p-8 rounded-xl bg-white/70 dark:bg-gray-900/70 shadow-md">
+          <h1 className="text-3xl font-extrabold text-blue-700 dark:text-pink-300 mb-4 mt-2">{course.title}</h1>
+          <p className="text-lg text-gray-700 dark:text-gray-200 mb-8">{course.description}</p>
           {selectedSection && (
-            <article>
+            <article className="w-full h-full mb-8">
               <h2 className="text-2xl font-bold text-blue-600 dark:text-pink-200 mb-4">{selectedSection.title}</h2>
-              <div className="prose prose-lg dark:prose-invert max-w-none">
-                <ReactMarkdown>{selectedSection.content}</ReactMarkdown>
+              <div className="p-0">
+                <MarkdownPreview source={selectedSection.content} className="markdown-body text-base md:text-lg leading-relaxed text-gray-800 dark:text-gray-100" />
               </div>
             </article>
           )}
@@ -96,4 +96,4 @@ export default function BeginnerCoursePage() {
       </div>
     </main>
   );
-} 
+}
